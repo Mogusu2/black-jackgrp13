@@ -1,3 +1,8 @@
+function initiaze(){
+    displayAce ();
+    displayLowLevelCards();
+    displayFaceCards();
+}
 class Card {
     static cardDesign(myCard){
         const card = document.createElement('div');
