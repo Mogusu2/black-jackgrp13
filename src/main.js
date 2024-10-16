@@ -191,4 +191,66 @@ function illustrateStepOne (step){
         },4000)    
         dealButton.removeEventListener('click', promptDeal);
     }          
+}illustrateStepOne(dealer_deal);
+illustrateStepTwo(player_deal);
+illustrateStepThree(dealerRevealsCard);
+function illustrateStepTwo (step){
+     //dealers' hand
+     const dealer = document.createElement('div');
+     dealer.style.width = '100%';   
+     dealer.style.height = '270px';
+     
+     dealer.style.padding = "5px"
+     dealer.style.display ="flex"
+     dealer.style.position = "relative"
+ 
+     const declareDealer = document.createElement('p');
+     declareDealer.innerText = "Dealer";
+     declareDealer.position = "absolute"    
+     declareDealer.style.top = '0px'
+     step.appendChild(dealer);
+     step.appendChild(declareDealer);
+ 
+     //players' hand
+     const player = document.createElement('div');
+     player.style.width = '100%';   
+     player.style.minHeight = '270px'; 
+     player.style.marginTop = "110px"   
+     player.style.padding = "5px"
+     player.style.flexWrap = "wrap"
+     player.style.display ="flex"
+     player.style.position = "relative"
+ 
+ 
+     const declarePlayer = document.createElement('p');
+     declarePlayer.innerHTML = `Player <span id ="points2"class="color">POINTS = (10) + (3) +(4)</span>`;
+     declarePlayer.position = "absolute"    
+     declarePlayer.style.top = '0px'
+     step.appendChild(player);
+     step.appendChild(declarePlayer);
+     const points= document.querySelector('#points2');
+     points.style.display = "none"
+
+     let king = HigherCards.cardDesign("./media/king.png", "K")
+     let upsideDownCard = HigherCards.cardDesign("./media/playing-card.png", "")
+     let jack = HigherCards.cardDesign("./media/jack.png",'J');
+     let card3 = Card.cardDesign(3)
+     dealer.appendChild(king);
+     dealer.appendChild(upsideDownCard);
+     player.appendChild(jack);
+     player.appendChild(card3);
+     
+     const deal = document.querySelector('#deal_btn2');
+     deal.addEventListener ('click', handler)
+     
+     function handler(){
+        let card4 = Card.cardDesign(4);
+        setTimeout(()=>{
+            player.appendChild(card4);
+            points.style.display = "block";
+        },2000)
+        
+        deal.removeEventListener ('click', handler)
+     }
+ 
 }
