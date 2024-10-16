@@ -109,3 +109,30 @@ const queen = HigherCards.cardDesign("./media/queen.png", "Q")
 let jack = HigherCards.cardDesign("./media/jack.png",'J')
 const ace = HigherCards.cardDesign("./media/ace.png", "A")
 
+
+function displayLowLevelCards (){
+    const cards2_7 = document.querySelector('#cards2_7');
+    cards2_7.appendChild(card2);
+    cards2_7.appendChild(card3);
+    cards2_7.appendChild(card4);
+    cards2_7.appendChild(card5);
+    cards2_7.appendChild(card6);
+    cards2_7.appendChild(card7);
+    cards2_7.appendChild(card8);
+    cards2_7.appendChild(card9);
+    cards2_7.appendChild(card10);
+}
+
+
+function displayFaceCards (){
+    const faceCards = document.querySelector('#face_cards');
+    faceCards.appendChild(jack);
+    faceCards.appendChild(queen);
+    faceCards.appendChild(king);
+}
+
+
+function displayAce (){
+    const aces = document.querySelector('#aces');
+    aces.appendChild(ace);
+}
