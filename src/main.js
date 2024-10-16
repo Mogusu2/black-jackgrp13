@@ -136,3 +136,59 @@ function displayAce (){
     const aces = document.querySelector('#aces');
     aces.appendChild(ace);
 }
+
+const dealer_deal = document.querySelector('#step_1_div')
+const player_deal = document.querySelector('#step_2_div')
+const dealerRevealsCard = document.querySelector('#step_3_div')
+
+function illustrateStepOne (step){
+    
+    
+
+    //dealers' hand
+    const dealer = document.createElement('div');
+    dealer.style.width = '100%';   
+    dealer.style.height = '270px';
+    
+    dealer.style.padding = "5px"
+    dealer.style.display ="flex"
+    dealer.style.position = "relative"
+
+    const declareDealer = document.createElement('p');
+    declareDealer.innerText = "Dealer";
+    declareDealer.position = "absolute"    
+    declareDealer.style.top = '0px'
+    step.appendChild(dealer);
+    step.appendChild(declareDealer);
+
+    //players' hand
+    const player = document.createElement('div');
+    player.style.width = '100%';   
+    player.style.height = '270px'; 
+    player.style.marginTop = "110px"   
+    player.style.padding = "5px"
+    player.style.display ="flex"
+    player.style.position = "relative"
+
+
+    const declarePlayer = document.createElement('p');
+    declarePlayer.innerHTML = `Player <span id ="points"class="color">POINTS = (10) + (3)</span>`;
+    declarePlayer.position = "absolute"    
+    declarePlayer.style.top = '0px'
+    step.appendChild(player);
+    step.appendChild(declarePlayer);
+    const points= document.querySelector('#points');
+    points.style.display = "none"
+
+    const dealButton= document.querySelector('#deal_btn');
+    dealButton.addEventListener('click', promptDeal);
+    function promptDeal(){
+        
+        dealForDealer(dealer);
+        dealForPlayer(player);      
+        setTimeout(()=>{
+            points.style.display = "block" 
+        },4000)    
+        dealButton.removeEventListener('click', promptDeal);
+    }          
+}
