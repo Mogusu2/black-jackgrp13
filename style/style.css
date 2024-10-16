@@ -9,5 +9,12 @@
 text-align: center;
 margin: 10px;
 }
+#About_blackjack p{
+    width: 90%;
+    display: block;
+    margin: 4px auto;
+    font-size: medium;
+    
+}
 
 
