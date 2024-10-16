@@ -94,3 +94,18 @@ class HigherCards {
         this.suit.style.height = height
     }
 }
+const card2 = Card.cardDesign(2)
+let card3 = Card.cardDesign(3)
+let card4 = Card.cardDesign(4)
+const card5 = Card.cardDesign(5)
+let card6 = Card.cardDesign(6)
+const card7 = Card.cardDesign(7)
+const card8 = Card.cardDesign(8)
+const card9 = Card.cardDesign(9)
+const card10 = Card.cardDesign(10)
+
+let king = HigherCards.cardDesign("./media/king.png", "K")
+const queen = HigherCards.cardDesign("./media/queen.png", "Q")
+let jack = HigherCards.cardDesign("./media/jack.png",'J')
+const ace = HigherCards.cardDesign("./media/ace.png", "A")
+
