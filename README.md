@@ -30,7 +30,7 @@ Here’s how you can get the tutorial and game up and running on your pc.
 
 2. **Navigate into the project folder**:
 
-cd <project directory>
+cd black-jackgrp13
 
 
 ### Game rules
